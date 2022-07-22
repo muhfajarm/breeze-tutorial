@@ -51,7 +51,8 @@ class PasswordResetLinkController extends Controller
         }
 
         throw ValidationException::withMessages([
-            $loginField => [trans($status)],
+            // $loginField => [trans($status)],
+            'login' => [trans($status)],
         ]);
     }
 }
